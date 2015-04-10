@@ -5,16 +5,25 @@ The ETA framework is a Javascript library that you can use to compute the diffic
 
 Read more about ETA: http://hci.stanford.edu/publications/paper.php?id=294
 
-Examples
---------
-The `examples` folder contains sample code for how to use this library.
+Demo
+----
+See a [demonstration](https://files.clr3.com/eta/examples/multiple-choice_demo.html) of the interface ETA generates to evaluate the difficulty of a task.
 
-* `multiple_choice.html` - Multiple choice question
+Getting Started
+---------------
+The `examples` folder contains sample code for how this library can be used.
 
-Updates
--------
-- Added example code
+Each example comes with two files: `*_demo.html` can be opened directly in your browser, and the code in `*_mturk.html` can be copied directly into Mechanical Turk as a single HIT.
 
-Todos
------
-- Add code to parse mechanical turk output
+* `multiple-choice` - Multiple choice task
+
+Contributing
+------------
+If you are interested in contributing to the development of ETA, keep reading!
+
+Source files are included in the `src` folder. To build ETA, first run these commands:
+	
+	brew install node
+	npm install clean-css -g
+
+and then run `./build.sh` from `src`, which will output ETA to the `releases` folder.

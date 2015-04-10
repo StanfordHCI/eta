@@ -167,14 +167,14 @@ PT.prepare = function(exp_name) {
   }
 
   // Verify reserved ids don't exist
-  var reserved_elts = ["#questions", "#hidden_questions", "#bot-bar", "#seconds_left", "#errors", "#btn-next", "#submitButton"];
+  var reserved_elts = ["#questions", "#hidden_questions", "#bot-bar", "#seconds_left", "#errors", "#btn-next"];
   for (var i = 0; i < reserved_elts.length; i++) {
-    assert($(reserved_elts[i]).length == 0, "You can't use the reserved element with selector: " + required_elts[i]);
+    assert($(reserved_elts[i]).length == 0, "You can't use the reserved element with selector: " + reserved_elts[i]);
   }
 
   // Add HTML elements
   var top_bar = "<div class=\"row\"><div class=\"col-md-12 top-bar\"></div></div>";
-  $("form").prepend($(top_bar));
+  $("#container").prepend($(top_bar));
   var bottom_bar = "<div id=\"questions\"></div>";
   bottom_bar += "<div class=\"row\" id=\"bot-bar\">";
   bottom_bar += "<div class=\"col-md-12 bottom-bar\" id=\"bar_bottom\">";
@@ -184,7 +184,7 @@ PT.prepare = function(exp_name) {
   bottom_bar += "<input type=\"button\" id=\"submitButton\" value=\"Submit\" class=\"btn btn-lg btn-success\" />";
   bottom_bar += "</div></div>";
   bottom_bar += "<div id=\"hidden_questions\"></div>";
-  $("form").append($(bottom_bar));
+  $("#container").append($(bottom_bar));
 
   // Add hidden form elements
   var hidden_elts = ['order', 'start_timing', 'next_timings', 'time_limits', 'window_focuses', 'practice_ids', 'ip_address', 'browser_info'];
@@ -267,12 +267,12 @@ PT.build_questions = function(question_metadata, question_data) {
       }
       $r.html(r_html);
       $r.find("input").each(function() {
-        assert($(this).attr("name") != "id", "You can't name a form element \"id\".");
+        assert($(this).attr("name") != "eta_id", "You can't name a form element \"eid\".");
         $(this).attr("name", "q" + question_id + "_" + $(this).attr("name"));
         $(this).data("input_id", $(this).attr("name"));
       });
       $r.attr("id", "q" + question_id + "_box");
-      $id_field = $("<input type=\"hidden\" name=\"q" + question_id + "_id\" value=\"" + qdata['ID'] + "\">")
+      $id_field = $("<input type=\"hidden\" name=\"q" + question_id + "_eid\" value=\"" + qdata['ID'] + "\">")
       $r.append($id_field);
       $("#questions").append($r);
       $r.hide();
@@ -445,5 +445,12 @@ PT.initialize = function(question_metadata, question_data) {
 
   // Placeholder text for IE
   $('input, textarea').placeholder();
+
+  // Show Test Popup if Preview
+  if (getURIParam('assignmentId') == "ASSIGNMENT_ID_NOT_AVAILABLE") {
+    var hit_preview = "<div class=\"hit_preview\"><div class=\"hit_preview_inner\">";
+    hit_preview += "Your work will not be saved until you accept this HIT.</div></div>";
+    $("#container").append($(hit_preview));
+  }
 
 };

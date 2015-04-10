@@ -103,3 +103,29 @@ h1, h2, h3, h4 {
 }
 
 div.unselectable { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; }
+
+div.hit_preview {
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+div.hit_preview_inner {
+  background-color: #f0f0f0;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  height: 100px;
+  width: 100%;
+  margin-top: -50px;
+  padding: 8px;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+}

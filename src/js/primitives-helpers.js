@@ -246,6 +246,13 @@ jQuery.fn.getCursorPosition = function(){
     return $(this).getSelectionStart();
 };
 
+function getURIParam(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var r = new RegExp("[\\?&]" + name + "=([^&#]*)");
+    var res = r.exec(location.search);
+    return res === null ? "" : decodeURIComponent(res[1].replace(/\+/g, " "));
+}
+
 //
 // IE AJAX Enable
 //
