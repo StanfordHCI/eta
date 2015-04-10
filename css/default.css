@@ -1,0 +1,105 @@
+.question .row .col-md-6:first-child {
+  border-right: 1px solid #cfcfcf;
+}
+
+.img-right {
+  text-align: right;
+}
+
+.img-right img {
+  margin: 15px 0px;
+}
+
+.question img {
+  max-width: 450px;
+  max-height: 350px;
+}
+
+.qimage {
+  height: 350px;
+}
+
+span.labem {
+  /*color: #FFFC7F;*/
+  font-weight: 700;
+}
+.question label {
+  font-size: larger;
+  font-weight: 400;
+}
+
+.top-bar {
+  height: 8px;
+  background-color: #cfcfcf;
+  margin-bottom: 12px;
+}
+
+.bottom-bar {
+  background: -moz-linear-gradient(top, rgba(220,220,220,0.7) 0%, rgba(220,220,220,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220,220,220,0.7)), color-stop(100%,rgba(220,220,220,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(220,220,220,0.7) 0%,rgba(220,220,220,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(220,220,220,0.7) 0%,rgba(220,220,220,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(220,220,220,0.7) 0%,rgba(220,220,220,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(220,220,220,0.7) 0%,rgba(220,220,220,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dcdcdc', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
+  padding: 8px;
+  text-align: right;
+  margin-top: 8px;
+  height: 61px;
+}
+
+#submitButton {
+  display: none;
+}
+
+#errors, #seconds_left {
+  font-size: larger;
+}
+
+.text-error {
+  border: 1px solid red;
+}
+
+#bot-bar {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+}
+@media (min-width: 768px) {
+  #bot-bar {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  #bot-bar {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  #bot-bar {
+    width: 1170px;
+  }
+}
+
+.errors {
+/*  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;*/
+  color: black;
+  font-weight: bold;
+}
+
+.errors_highlight {
+/*  transition: color .3s ease;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;*/
+  color: red;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0px;
+}
+
+div.unselectable { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; }

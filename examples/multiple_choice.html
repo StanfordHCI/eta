@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ETA / Multiple Choice</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/default.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="../js/imagesloaded.pkgd.min.js"></script>
+  <script src="../js/jquery.hotkeys.js"></script>
+  <script src="../js/jquery.placeholder.js"></script>
+  <script src="../js/primitives-helpers.js"></script>
+  <script src="../js/primitives-base.js"></script>
+</head>
+
+<body>
+<script>
+$(function() {
+  // Prepare experiment
+  var exp_name = "0409_tester";
+  PT.prepare(exp_name);
+
+  // Define task metadata
+  var question_metadata = {
+    time_limits: [-1, 1, 2],
+    num_reps: [3, 3, 3],
+    practice_time_limit: 8,
+    practice_num_reps: 3
+  };
+
+  // Define task questions
+  var question_data = [
+    {
+      ID: 1, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/applauding_013.jpg",
+      LABEL1: "applauding", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "climbing"
+    },
+    {
+      ID: 2, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/waving_hands_022.jpg",
+      LABEL1: "applauding", LABEL2: "climbing", LABEL3: "waving", LABEL4: "brushing"
+    },
+    {
+      ID: 3, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/rowing_a_boat_023.jpg",
+      LABEL1: "rowing", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "climbing"
+    },
+    {
+      ID: 4, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_027.jpg",
+      LABEL1: "applauding", LABEL2: "brushing", LABEL3: "gardening", LABEL4: "climbing"
+    },
+    {
+      ID: 5, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_022.jpg",
+      LABEL1: "applauding", LABEL2: "gardening", LABEL3: "brushing", LABEL4: "climbing"
+    },
+    {
+      ID: 6, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_003.jpg",
+      LABEL1: "applauding", LABEL2: "gardening", LABEL3: "brushing", LABEL4: "climbing"
+    },
+    {
+      ID: 7, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/running_006.jpg",
+      LABEL1: "gardening", LABEL2: "running", LABEL3: "waving", LABEL4: "brushing"
+    },
+    {
+      ID: 8, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/running_005.jpg",
+      LABEL1: "rowing", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "running"
+    },
+    {
+      ID: 9, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_024.jpg",
+      LABEL1: "gardening", LABEL2: "brushing", LABEL3: "reading", LABEL4: "climbing"
+    },
+    {
+      ID: 10, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/writing_on_a_book_024.jpg",
+      LABEL1: "applauding", LABEL2: "climbing", LABEL3: "waving", LABEL4: "writing"
+    },
+    {
+      ID: 11, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/climbing_014.jpg",
+      LABEL1: "rowing", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "climbing"
+    },
+    {
+      ID: 12, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/fishing_025.jpg",
+      LABEL1: "fishing", LABEL2: "brushing", LABEL3: "gardening", LABEL4: "climbing"
+    },
+  ];
+  shuffle(question_data);
+
+  // Initialize
+  PT.initialize(question_metadata, question_data);
+});
+</script>
+
+<div class="container" id="container">
+  <form role="form">
+
+    <!--START EDITING HERE-->
+
+    <div class="base_q">
+      <div class="col-md-6 text-center qimage">
+        <img src="#IMG_URL#">
+      </div>
+      <div class="col-md-6">
+        <label class="question_hide">Pick a label that best applies to this image.</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="action" value="#LABEL1#">
+            <span class="radio_hide">#LABEL1#</span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="action" value="#LABEL2#">
+            <span class="radio_hide">#LABEL2#</span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="action" value="#LABEL3#">
+            <span class="radio_hide">#LABEL3#</span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="action" value="#LABEL4#">
+            <span class="radio_hide">#LABEL4#</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--EDIT THE INSTRUCTION PAGES BELOW-->
+
+    <div class="instructions_start">
+    <div class="col-md-12">
+      <h1>Multiple Choice Example</h1>
+      <p class="lead">
+        Answer the following multiple-choice questions to the best of your ability.<br>
+        All HITs will be verified before being approved.<br>
+        Click "Next" to begin.<br>
+      </p>
+      <ul class="list-unstyled">
+        <li>A "submit" button will appear when you've completed the task.</li>
+        <li>This HIT has been tested in Internet Explorer 11+, Firefox, and Chrome, and may not work with other browsers or versions.</b></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="instructions">
+      <div class="col-md-12">
+        <h2>Instructions #PRACTICE_STRING#</h2>
+        You will have <b>#TIME_LIMIT_STRING#</b> to answer each of the next <b>#NUM_REPS#</b> questions.<br><br>
+        Your remaining time will be shown at the bottom left of the page.<br><br>
+        Answer each question to the best of your ability.<br><br>
+        Click "<b>Next</b>" to continue.
+      </div>
+    </div>
+
+    <div class="end_comments">
+    <div class="col-md-12">
+      <label for="comments">Finally, what thoughts do you have about this HIT?</label><br>
+      <textarea class="form-control" name="comments" id="comments" cols="50" rows="5" placeholder="What thoughts do you have about this HIT?"></textarea>
+      <br>
+      <div class="text-center">
+        <strong>Thank you for completing this HIT!</strong><br>
+        Click "<b>Submit</b>" to submit your results.
+      </div>
+    </div>
+    </div>
+
+    <!--STOP EDITING HERE-->
+
+  </form>
+</div>
+</body>
+
+</html>
