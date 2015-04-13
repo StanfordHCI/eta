@@ -1,0 +1,11 @@
+ETA is the work of:
+
+* Justin Cheng
+* Jaime Teevan
+* Michael Bernstein
+
+The ETA framework uses code from:
+
+* imagesLoaded (https://github.com/desandro/imagesloaded)
+* jquery.hotkeys (https://github.com/jeresig/jquery.hotkeys)
+* jquery.placeholder (http://mths.be/placeholder)
