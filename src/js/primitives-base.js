@@ -255,7 +255,7 @@ PT.build_questions = function(question_metadata, question_data) {
 
       // Sanity checks
       assert('ID' in qdata, "Every question must have a field called \"ID\".");
-      assert(qdata['ID'].toString.length > 0, "Every question ID must be non-empty.");
+      assert(qdata['ID'].toString().length > 0, "Every question ID must be non-empty.");
       assert(!(qdata['ID'] in seen_ids), "Every question ID must be unique.");
       seen_ids[qdata['ID']] = true;
 

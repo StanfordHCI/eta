@@ -26,56 +26,7 @@ $(function() {
   };
 
   // Define task questions
-  var question_data = [
-    {
-      ID: 1, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/applauding_013.jpg",
-      LABEL1: "applauding", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "climbing"
-    },
-    {
-      ID: 2, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/waving_hands_022.jpg",
-      LABEL1: "applauding", LABEL2: "climbing", LABEL3: "waving", LABEL4: "brushing"
-    },
-    {
-      ID: 3, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/rowing_a_boat_023.jpg",
-      LABEL1: "rowing", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "climbing"
-    },
-    {
-      ID: 4, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_027.jpg",
-      LABEL1: "applauding", LABEL2: "brushing", LABEL3: "gardening", LABEL4: "climbing"
-    },
-    {
-      ID: 5, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_022.jpg",
-      LABEL1: "applauding", LABEL2: "gardening", LABEL3: "brushing", LABEL4: "climbing"
-    },
-    {
-      ID: 6, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_003.jpg",
-      LABEL1: "applauding", LABEL2: "gardening", LABEL3: "brushing", LABEL4: "climbing"
-    },
-    {
-      ID: 7, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/running_006.jpg",
-      LABEL1: "gardening", LABEL2: "running", LABEL3: "waving", LABEL4: "brushing"
-    },
-    {
-      ID: 8, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/running_005.jpg",
-      LABEL1: "rowing", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "running"
-    },
-    {
-      ID: 9, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_024.jpg",
-      LABEL1: "gardening", LABEL2: "brushing", LABEL3: "reading", LABEL4: "climbing"
-    },
-    {
-      ID: 10, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/writing_on_a_book_024.jpg",
-      LABEL1: "applauding", LABEL2: "climbing", LABEL3: "waving", LABEL4: "writing"
-    },
-    {
-      ID: 11, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/climbing_014.jpg",
-      LABEL1: "rowing", LABEL2: "brushing", LABEL3: "cleaning", LABEL4: "climbing"
-    },
-    {
-      ID: 12, IMG_URL: "https://s3-us-west-2.amazonaws.com/primitives/actions/fishing_025.jpg",
-      LABEL1: "fishing", LABEL2: "brushing", LABEL3: "gardening", LABEL4: "climbing"
-    },
-  ];
+  var question_data = [{"LABEL1":"applauding","LABEL2":"brushing","LABEL3":"cleaning","LABEL4":"climbing","ACTION":"applauding","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/applauding_013.jpg","ID":"1"},{"LABEL1":"applauding","LABEL2":"climbing","LABEL3":"waving","LABEL4":"brushing","ACTION":"waving","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/waving_hands_022.jpg","ID":"2"},{"LABEL1":"rowing","LABEL2":"brushing","LABEL3":"cleaning","LABEL4":"climbing","ACTION":"rowing","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/rowing_a_boat_023.jpg","ID":"3"},{"LABEL1":"applauding","LABEL2":"gardening","LABEL3":"brushing","LABEL4":"climbing","ACTION":"gardening","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_027.jpg","ID":"4"},{"LABEL1":"applauding","LABEL2":"gardening","LABEL3":"brushing","LABEL4":"climbing","ACTION":"brushing","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_022.jpg","ID":"5"},{"LABEL1":"gardening","LABEL2":"running","LABEL3":"applauding","LABEL4":"brushing","ACTION":"brushing","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_003.jpg","ID":"6"},{"LABEL1":"gardening","LABEL2":"running","LABEL3":"waving","LABEL4":"brushing","ACTION":"running","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/running_006.jpg","ID":"7"},{"LABEL1":"rowing","LABEL2":"brushing","LABEL3":"cleaning","LABEL4":"running","ACTION":"running","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/running_005.jpg","ID":"8"},{"LABEL1":"gardening","LABEL2":"brushing","LABEL3":"reading","LABEL4":"climbing","ACTION":"gardening","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_024.jpg","ID":"9"},{"LABEL1":"applauding","LABEL2":"climbing","LABEL3":"waving","LABEL4":"writing","ACTION":"writing","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/writing_on_a_book_024.jpg","ID":"10"},{"LABEL1":"rowing","LABEL2":"brushing","LABEL3":"cleaning","LABEL4":"climbing","ACTION":"climbing","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/climbing_014.jpg","ID":"11"},{"LABEL1":"fishing","LABEL2":"brushing","LABEL3":"gardening","LABEL4":"climbing","ACTION":"fishing","IMG_URL":"https://s3-us-west-2.amazonaws.com/primitives/actions/fishing_025.jpg","ID":"12"}];
   shuffle(question_data);
 
   // Initialize

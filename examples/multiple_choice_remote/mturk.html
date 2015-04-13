@@ -20,13 +20,12 @@ $(function() {
 
   // Get task questions remotely
   $.ajax({
-    url: "https://files.clr3.com/eta/test/get_image_urls_5.php",
+    url: "https://files.clr3.com/eta/examples/multiple_choice_remote/get.php",
     jsonpCallback: "callback", dataType: "jsonp",
     data: {},
     success: function (data) {      
-      var question_data = data['data'];
+      var question_data = data;
       shuffle(question_data);
-      PT.set_ip_address(data['ip']); // optional
       PT.initialize(question_metadata, question_data);
     }
   });
@@ -43,35 +42,35 @@ $(function() {
         <img src="#IMG_URL#">
       </div>
       <div class="col-md-6">
-        <label class="question_hide">Pick a label that best applies to this image.</label>
+        <label>Pick a label that best applies to this image.</label>
         <div class="radio">
           <label>
             <input type="radio" name="answer" value="#LABEL1#">
-            <span class="radio_hide">#LABEL1#</span>
+            <span>#LABEL1#</span>
           </label>
         </div>
         <div class="radio">
           <label>
             <input type="radio" name="answer" value="#LABEL2#">
-            <span class="radio_hide">#LABEL2#</span>
+            <span>#LABEL2#</span>
           </label>
         </div>
         <div class="radio">
           <label>
             <input type="radio" name="answer" value="#LABEL3#">
-            <span class="radio_hide">#LABEL3#</span>
+            <span>#LABEL3#</span>
           </label>
         </div>
         <div class="radio">
           <label>
             <input type="radio" name="answer" value="#LABEL4#">
-            <span class="radio_hide">#LABEL4#</span>
+            <span>#LABEL4#</span>
           </label>
         </div>
         <div class="radio">
           <label>
             <input type="radio" name="answer" value="#LABEL5#">
-            <span class="radio_hide">#LABEL5#</span>
+            <span>#LABEL5#</span>
           </label>
         </div>
       </div>

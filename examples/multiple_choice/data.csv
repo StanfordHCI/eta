@@ -1,0 +1,13 @@
+ID,IMG_URL,LABEL1,LABEL2,LABEL3,LABEL4,ACTION
+1,https://s3-us-west-2.amazonaws.com/primitives/actions/applauding_013.jpg,applauding,brushing,cleaning,climbing,applauding
+2,https://s3-us-west-2.amazonaws.com/primitives/actions/waving_hands_022.jpg,applauding,climbing,waving,brushing,waving
+3,https://s3-us-west-2.amazonaws.com/primitives/actions/rowing_a_boat_023.jpg,rowing,brushing,cleaning,climbing,rowing
+4,https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_027.jpg,applauding,gardening,brushing,climbing,gardening
+5,https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_022.jpg,applauding,gardening,brushing,climbing,brushing
+6,https://s3-us-west-2.amazonaws.com/primitives/actions/brushing_teeth_003.jpg,gardening,running,applauding,brushing,brushing
+7,https://s3-us-west-2.amazonaws.com/primitives/actions/running_006.jpg,gardening,running,waving,brushing,running
+8,https://s3-us-west-2.amazonaws.com/primitives/actions/running_005.jpg,rowing,brushing,cleaning,running,running
+9,https://s3-us-west-2.amazonaws.com/primitives/actions/gardening_024.jpg,gardening,brushing,reading,climbing,gardening
+10,https://s3-us-west-2.amazonaws.com/primitives/actions/writing_on_a_book_024.jpg,applauding,climbing,waving,writing,writing
+11,https://s3-us-west-2.amazonaws.com/primitives/actions/climbing_014.jpg,rowing,brushing,cleaning,climbing,climbing
+12,https://s3-us-west-2.amazonaws.com/primitives/actions/fishing_025.jpg,fishing,brushing,gardening,climbing,fishing
