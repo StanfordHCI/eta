@@ -76,14 +76,6 @@ def logit_func(x, a, b, c):
 def gen_eta(xys, out_dir):
     xdata, ydata = xys
 
-    # # Categorize
-    # xdata = [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0]
-    # ydata = [1.0, 0.925, 0.828, 0.344, 0.140, 0.0, 0.0]
-
-    # Binary
-    # xdata = [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0]
-    # ydata = [1.00000000, 0.91397849, 0.55913978, 0.15053763, 0.01075269, -0.01075269, -0.01075269]
-
     # Renormalizing Errors
     ymin, ymax = min(ydata), max(ydata)
 
