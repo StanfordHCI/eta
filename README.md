@@ -7,7 +7,7 @@ More details are provided in [this paper](http://hci.stanford.edu/publications/2
 
 Demo
 ----
-See a [demonstration](https://files.clr3.com/eta/examples/multiple-choice_demo.html) of the interface ETA generates to evaluate the difficulty of a task. By running this task on Mechanical Turk, the ETA framework can generate an error-time curve, and compute the ETA for a task:
+See a [demonstration](https://files.clr3.com/eta/examples/multiple_choice_remote/mturk.html) of the interface ETA generates to evaluate the difficulty of a task. By running this task on Mechanical Turk, the ETA framework can generate an error-time curve, and compute the ETA for a task:
 
 ![ETA](https://files.clr3.com/eta/web/eta.png)
 
